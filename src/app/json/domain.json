@@ -1,0 +1,223 @@
+{
+  "domain": [
+    {
+      "id": "1",
+      "name": "Sara Lowe",
+      "company": "PYRAMI",
+      "email": "saralowe@pyrami.com",
+      "isApproved": 2
+    },
+    {
+      "id": "2",
+      "name": "Cantu Martin",
+      "company": "CYTRAK",
+      "email": "cantumartin@cytrak.com",
+      "isApproved": 1
+    },
+    {
+      "id": "3",
+      "name": "Shaffer Burton",
+      "company": "TERAPRENE",
+      "email": "shafferburton@teraprene.com",
+      "isApproved": 1
+    },
+    {
+      "id": "4",
+      "name": "Duke Dale",
+      "company": "ZANILLA",
+      "email": "dukedale@zanilla.com",
+      "isApproved": 1
+    },
+    {
+      "id": "5",
+      "name": "Melanie Bridges",
+      "company": "FUELWORKS",
+      "email": "melaniebridges@fuelworks.com",
+      "isApproved": 1
+    },
+    {
+      "id": "6",
+      "name": "Kay Juarez",
+      "company": "NETPLAX",
+      "email": "kayjuarez@netplax.com",
+      "isApproved": 1
+    },
+    {
+      "id": "7",
+      "name": "Rebecca Bowman",
+      "company": "OCTOCORE",
+      "email": "rebeccabowman@octocore.com",
+      "isApproved": 1
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "Betty Glenn",
+      "email": "bettyglenn@boilcat.com",
+      "idCompany": 1,
+      "password": 12345678,
+      "isApproved": 2
+    },
+    {
+      "id": "2",
+      "name": "Candy Rios",
+      "email": "candyrios@boilcat.com",
+      "idCompany": 7,
+      "password": 12345678,
+      "isApproved": 2
+    },
+    {
+      "id": "3",
+      "name": "Christi Lowe",
+      "email": "christilowe@boilcat.com",
+      "idCompany": 3,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "4",
+      "name": "Kaitlin Blevins",
+      "email": "kaitlinblevins@boilcat.com",
+      "idCompany": 2,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "5",
+      "name": "Hall Christian",
+      "email": "hallchristian@boilcat.com",
+      "idCompany": 6,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "6",
+      "name": "Tamara Burke",
+      "email": "tamaraburke@boilcat.com",
+      "idCompany": 7,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "7",
+      "name": "Brandie Sanders",
+      "email": "brandiesanders@boilcat.com",
+      "idCompany": 7,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "8",
+      "name": "Mai Garza",
+      "email": "maigarza@boilcat.com",
+      "idCompany": 2,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "9",
+      "name": "Espinoza Gill",
+      "email": "espinozagill@boilcat.com",
+      "idCompany": 2,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "10",
+      "name": "Hopkins Norton",
+      "email": "hopkinsnorton@boilcat.com",
+      "idCompany": 5,
+      "password": 12345678,
+      "isApproved": 1
+    },
+    {
+      "id": "11",
+      "name": "jose",
+      "email": "jose@gmail.com",
+      "idCompany": 2,
+      "password": "123",
+      "isApproved": 2
+    },
+    {
+      "id": "12",
+      "name": "Guadalupe",
+      "email": "Guadalupe@gmail.com",
+      "idCompany": 2,
+      "password": "123",
+      "isApproved": 2
+    }
+  ],
+  "UserEmail": [
+    {
+      "id": "1",
+      "idRender": 3,
+      "idRecipient": 4,
+      "Body": "Pariatur irure tempor ex ut Lorem anim voluptate. Nisi est ad commodo fugiat pariatur ea ut. Et aliquip ullamco eiusmod dolore consectetur nostrud incididunt nostrud aliqua aliqua irure ex excepteur. Et dolore sunt ut commodo fugiat duis sunt ut. Dolor ipsum Lorem veniam mollit commodo incididunt. Consequat culpa minim exercitation reprehenderit consectetur ea esse elit dolor id do. Fugiat magna ad laborum elit.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "2",
+      "idRender": 3,
+      "idRecipient": 2,
+      "Body": "Minim in sunt veniam occaecat consectetur aute. Veniam dolore dolore sunt tempor cupidatat consequat reprehenderit aute cupidatat ipsum. Dolor anim ad occaecat laboris aute irure quis ullamco ex sit dolor ea anim in. Non sint aliqua mollit nostrud non nostrud aute deserunt ad. Est occaecat Lorem ipsum mollit aliquip voluptate ad ipsum quis voluptate commodo.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "3",
+      "idRender": 1,
+      "idRecipient": 4,
+      "Body": "Culpa eiusmod nulla officia dolor quis incididunt id incididunt sint duis irure reprehenderit. Aute mollit nulla exercitation fugiat. Sunt voluptate et deserunt irure consequat. Adipisicing sunt dolor qui ea dolore. Proident esse qui minim excepteur.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "4",
+      "idRender": 6,
+      "idRecipient": 6,
+      "Body": "Officia adipisicing id laboris pariatur consectetur sunt culpa nulla pariatur exercitation quis proident. Duis laborum adipisicing culpa ut in Lorem laboris velit eiusmod. Duis ipsum laborum ea mollit officia commodo sunt adipisicing pariatur aute adipisicing mollit. Laboris adipisicing deserunt eiusmod qui. Non sunt commodo aliquip adipisicing adipisicing dolore. Esse tempor quis sunt est deserunt magna exercitation.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "5",
+      "idRender": 2,
+      "idRecipient": 6,
+      "Body": "Velit fugiat reprehenderit aute velit labore reprehenderit nostrud incididunt. Excepteur commodo elit voluptate sit aliquip deserunt deserunt elit esse fugiat. Amet veniam in non ut pariatur sit ea reprehenderit commodo. Quis minim cupidatat velit ad Lorem pariatur occaecat nostrud dolore. Est deserunt laboris tempor anim consequat. Proident nostrud est sit labore laboris cupidatat incididunt laborum laborum. Ad ipsum exercitation aliqua sint.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "6",
+      "idRender": 2,
+      "idRecipient": 7,
+      "Body": "Ut amet sit mollit eu duis quis in esse Lorem. Ea laborum duis velit excepteur consequat commodo sunt enim sunt excepteur id consequat ut aute. Lorem quis pariatur voluptate sit eu Lorem dolor sunt. Anim sit dolore proident ullamco quis commodo qui consectetur do id nostrud dolor sunt exercitation. Eiusmod aute quis cillum occaecat nulla aliqua sit occaecat nulla nisi. Eu cillum sint ipsum cillum voluptate deserunt irure cillum duis ex.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "7",
+      "idRender": 5,
+      "idRecipient": 7,
+      "Body": "Consequat sunt tempor sint ullamco veniam incididunt incididunt culpa occaecat voluptate minim. Eiusmod pariatur amet minim cupidatat ullamco sunt. Lorem dolore voluptate irure anim Lorem excepteur tempor quis in exercitation. Pariatur laborum id incididunt occaecat cupidatat exercitation ullamco laborum magna nostrud exercitation. Occaecat amet cillum ea duis quis duis tempor. Esse veniam veniam veniam labore reprehenderit.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "8",
+      "idRender": 6,
+      "idRecipient": 5,
+      "Body": "Labore dolor enim consectetur eiusmod eiusmod non do proident laboris enim. Magna exercitation consectetur ullamco fugiat ad sunt sit pariatur pariatur labore in fugiat. Esse excepteur ullamco ullamco anim occaecat exercitation anim laboris ipsum officia occaecat magna duis. Elit anim esse irure consectetur dolore incididunt.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "9",
+      "idRender": 2,
+      "idRecipient": 6,
+      "Body": "Tempor ad incididunt aliquip ea exercitation in voluptate. In nostrud pariatur aliquip aliquip ullamco enim dolor ullamco minim labore. Dolor incididunt in aliquip ad. Incididunt duis aliqua minim aute sint ea irure eu labore dolore cupidatat laboris nostrud.\r\n",
+      "Subject": " Usuario te respondio "
+    },
+    {
+      "id": "10",
+      "idRender": 6,
+      "idRecipient": 3,
+      "Body": "Aliqua ut sunt Lorem adipisicing elit exercitation in. Do excepteur reprehenderit ipsum esse elit eu. Pariatur ipsum veniam consequat labore dolore ullamco reprehenderit quis eu qui officia culpa do.\r\n",
+      "Subject": " Usuario te respondio "
+    }
+  ]
+}

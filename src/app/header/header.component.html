@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="/main">
+          <img src="logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+          Mi Aplicación
+      </a>
+
+      <!-- Input de Búsqueda -->
+      <div class="mx-auto">
+          <form class="d-flex position-relative search-bar">
+              <i class="bi bi-search"></i>
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+      </div>
+
+      <!-- Usuario -->
+      <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+              {{userName}}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+              <li><a class="dropdown-item" href="/userConfig">Perfil</a></li>
+              <li><a class="dropdown-item" href="/main">Configuración</a></li>
+              <li><a class="dropdown-item" href="/userList">Usuarios</a></li>
+              <li><a class="dropdown-item" href="/domainList">Dominios</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+

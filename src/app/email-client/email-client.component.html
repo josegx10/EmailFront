@@ -1,0 +1,99 @@
+<div class="container-fluid">
+  <div> <app-header class="row bg-light p-3 fixed-top"></app-header> </div>
+<div class="row" style="margin-top: 100px;">
+  <div class="row full-height">
+      <!-- Sidebar -->
+      <div  class="col-md-3 col-lg-2 bg-primary text-white d-flex flex-column p-3 position-fixed vh-100">
+          <h2 class="h4 mb-4">Correo</h2>
+          <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                  <a href="#" class="nav-link text-white">
+                      <i class="bi bi-inbox"></i> Bandeja de entrada
+                  </a>
+              </li>
+              <li class="nav-item mb-2">
+                  <a href="#" class="nav-link text-white">
+                      <i class="bi bi-send"></i> Enviados
+                  </a>
+              </li>
+              <li class="nav-item mb-2">
+                  <a href="#" class="nav-link text-white">
+                      <i class="bi bi-file-earmark"></i> Borradores
+                  </a>
+              </li>
+              <li class="nav-item mb-2">
+                  <a href="#" class="nav-link text-white">
+                      <i class="bi bi-exclamation-triangle"></i> Spam
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link text-white">
+                      <i class="bi bi-trash"></i> Papelera
+                  </a>
+              </li>
+          </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2 p-3 content-area">
+          <!-- Header -->
+          <div class="bg-white p-4 shadow-sm d-flex justify-content-between align-items-center">
+              <h1 class="h4">Bandeja de entrada</h1>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#composeModal">
+                  <i class="bi bi-pencil-square"></i> Nuevo correo
+              </button>
+          </div>
+
+          <!-- Emails List and Content -->
+          <div class="d-flex flex-grow-1 overflow-hidden">
+
+              <div class="col-md-4 bg-white overflow-auto p-4">
+                @for (email of ArrayUsersEmail; track $index) {
+                  <app-email-list (click)="changeEmailContent(email)" [id]=email.id [idRender]=email.idRender [idRecipient]=email.idRecipient [Body]=email.Body [Subject]=email.Subject ></app-email-list>
+                }
+              </div>
+
+
+
+              <!-- Email Content -->
+              @if (emailContent.id != "") {
+                <app-email-content [id]= emailContent.id [idRender]=emailContent.idRender [idRecipient]=emailContent.idRecipient [Body]=emailContent.Body [Subject]=emailContent.Subject></app-email-content>
+              }
+
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="composeModal" tabindex="-1" aria-labelledby="composeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="composeModalLabel">Nuevo Correo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label for="to" class="form-label">Para:</label>
+                      <input type="email" class="form-control" id="to" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="subject" class="form-label">Asunto:</label>
+                      <input type="text" class="form-control" id="subject" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="message" class="form-label">Mensaje:</label>
+                      <textarea class="form-control" id="message" rows="6" required></textarea>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+</div>

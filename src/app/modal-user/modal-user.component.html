@@ -1,0 +1,40 @@
+<!-- Modal para ver detalles de una solicitud -->
+<div class="modal fade" id="viewRequestModal" tabindex="-1" aria-labelledby="viewRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="viewRequestModalLabel">Detalles de la Solicitud</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <!-- Detalles dinámicos del correo aquí -->
+              <p><strong>ID:</strong> <span id="requestId">{{id()}}</span></p>
+              <p><strong>Nombre de la Empresa:</strong> <span id="companyNameDetail"> {{name()}}</span></p>
+              <p><strong>Dominio Solicitado:</strong> <span id="domainRequestedDetail">{{email()}}</span></p>
+              <p><strong>Fecha de Solicitud:</strong> <span id="requestDateDetail">{{password()}}</span></p>
+              <p><strong>Notas:</strong></p>
+              <p id="requestNotesDetail">Notas adicionales sobre la solicitud.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Aprobar</button>
+              <button type="button" class="btn btn-danger">Rechazar</button>
+          </div>
+      </div>
+  </div>
+</div>
+<script>
+  // Ejemplo de script para rellenar los detalles del modal de ver solicitud
+  document.querySelectorAll('[data-bs-toggle="modal"]').forEach(button => {
+      button.addEventListener('click', () => {
+          const requestId = button.getAttribute('data-id');
+          // Aquí deberías cargar los detalles de la solicitud usando el requestId
+          // Por simplicidad, usamos valores estáticos en este ejemplo
+          document.getElementById('requestId').textContent = requestId;
+          document.getElementById('companyNameDetail').textContent = 'ABC Corp.';
+          document.getElementById('domainRequestedDetail').textContent = 'abc-corp.com';
+          document.getElementById('requestDateDetail').textContent = '10/08/2024';
+          document.getElementById('requestNotesDetail').textContent = 'Notas adicionales sobre la solicitud.';
+      });
+  });
+</script>

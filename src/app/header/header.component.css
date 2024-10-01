@@ -1,0 +1,13 @@
+.search-bar {
+  width: 400px; /* Ajusta el tamaño del input */
+}
+.search-bar .form-control {
+  padding-left: 2.5rem; /* Espacio para el icono */
+}
+.search-bar .bi-search {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d; /* Color del icono */
+}
