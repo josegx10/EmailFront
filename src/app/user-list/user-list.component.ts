@@ -15,6 +15,7 @@ import { ModalUserComponent } from '../modal-user/modal-user.component';
 })
 export class UserListComponent {
   users : any = [];
+  idCompany = localStorage.getItem('userIdCompany')
   selectedUser= {
     id: 'id',
     name: "name",
@@ -35,7 +36,7 @@ export class UserListComponent {
     })
     this.num++
     this.u.controls['id'].setValue(this.num)
-    this.u.controls['idCompany'].setValue(2)
+    this.u.controls['idCompany'].setValue(this.idCompany)
     this.u.controls['isApproved'].setValue(2)
   }
 
@@ -43,7 +44,13 @@ export class UserListComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.dataservice.getUser().subscribe(Response => {
-      this.users = Response
+      if(Response.length === 1){
+        this.users = Response.filter(user => user.idCompany.toString() === this.idCompany)
+      }else if(Response.length  > 1 ){
+        this.users = Response.filter(user => user.idCompany.toString() === this.idCompany)
+      }
+
+
     })
   }
   selectUser(user: any){
@@ -52,7 +59,18 @@ export class UserListComponent {
   crearUsuario(){
     console.log(this.u)
     this.num++
-    this.dataservice.postUser(new User(this.u.value.id, this.u.value.name, this.u.value.email, this.u.value.idCompany,this.u.value.password, 2)).subscribe(Response => console.log(Response))
+    this.dataservice.postUser(new User(this.u.value.id, this.u.value.name, this.u.value.email, this.u.value.idCompany,this.u.value.password, 2, false)).subscribe(Response => {
+      this.dataservice.getUser().subscribe(Response => {
+        this.users = Response.filter(user => user.idCompany.toString() === this.idCompany)
+      })
+
+      this.u.reset();
+      this.u.controls['idCompany'].setValue(this.idCompany)
+      const modalElement = document.getElementById('addRequestModal');
+      const modalInstance = (window as any).bootstrap.Modal.getInstance(modalElement);
+      modalInstance?.hide();
+    })
+
   }
   isApproved(user: any){
     user.isApproved = 2

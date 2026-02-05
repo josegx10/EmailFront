@@ -12,7 +12,8 @@ export class HeaderComponent {
   userName = ''
   userPassword = ''
   userEmail = ''
-
+  userIsMain = ''
+  userIdCompany = ''
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -22,6 +23,12 @@ export class HeaderComponent {
       this.userName = `${localStorage.getItem('userName')}`
       this.userPassword = `${localStorage.getItem('userPassword')}`
       this.userEmail = `${localStorage.getItem('userEmail')}`
+      this.userIsMain = `${localStorage.getItem('userIsMain')}`
+      this.userIdCompany = `${localStorage.getItem('userIdCompany')}`
     }
+  }
+
+  closeSession(){
+    localStorage.clear()
   }
 }

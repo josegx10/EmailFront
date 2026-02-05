@@ -1,16 +1,16 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { User } from './model/user.model';
-import { UserEmail } from './model/userEmail';
 import { Domain } from './model/domain.model';
+import { sentEmail } from './model/userEmail';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   data : any
-  url = "http://192.168.1.69:9100"
+  url = "http://192.168.1.73:9100"
   constructor(private http: HttpClient) {
 
   }
@@ -18,21 +18,27 @@ export class DataService {
     return this.http.get<User[]>(this.url + "/user/readAll");
   }
   postUser(user: User): Observable<User>{
-    return this.http.post<User>(this.url + "/user", user);
+    return this.http.post<User>(this.url + "/user/create", user);
   }
   putUser(user: User, id: number){
-    return this.http.put<User>(this.url + "/user/" + id, user)
+    return this.http.put<User>(this.url + "/user/update/" + id, user)
   }
 
-  getUserEmail():  Observable<UserEmail[]>{
-    return this.http.get<UserEmail[]>(this.url + "/UserEmail");
+  getUserEmail():  Observable<sentEmail[]>{
+    return this.http.get<sentEmail[]>(this.url + "/sent/readAll");
   }
-
+  postUserEmail(sent: sentEmail): Observable<sentEmail>{
+    return this.http.post<sentEmail>(this.url + "/sent/create", sent);
+  }
   getDomain() : Observable<Domain[]> {
-    return this.http.get<Domain[]>(this.url + "/domain");
+    return this.http.get<Domain[]>(this.url + "/company/readAll");
+  }
+
+  postDomain(domain: Domain): Observable<Domain> {
+    return this.http.post<Domain>(this.url + "/company/create", domain);
   }
   putDomain(user: Domain, id: number){
-    return this.http.put<Domain>(this.url + "/domain/" + id, user)
+    return this.http.put<Domain>(this.url + "/company/update/" + id, user)
   }
   getData(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.

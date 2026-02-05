@@ -29,6 +29,7 @@ export class LoginComponent {
         localStorage.setItem('userPassword',user[0].password)
         localStorage.setItem('userIsApproved', user[0].isApproved)
         localStorage.setItem('userIdCompany', user[0].idCompany)
+        localStorage.setItem('userIsMain', user[0].isMain)
 
         this.router.navigate(['/main']);
       }else {

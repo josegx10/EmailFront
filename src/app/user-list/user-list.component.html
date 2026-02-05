@@ -69,7 +69,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <form [formGroup]="u">
+              <form [formGroup]="u" (ngSubmit)="crearUsuario()">
                   <div class="mb-3">
                       <label for="companyName" class="form-label">Nombre del usuario</label>
                       <input type="text" class="form-control" id="companyName" placeholder="Nombre de la Empresa" formControlName="name">
@@ -82,7 +82,7 @@
                       <label for="requestNotes" class="form-label">Password</label>
                       <textarea class="form-control" id="requestNotes" rows="3" placeholder="Notas adicionales" formControlName="password"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-primary" (click)="crearUsuario()">Enviar Solicitud</button>
+                  <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
               </form>
           </div>
       </div>

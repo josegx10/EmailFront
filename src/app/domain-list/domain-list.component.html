@@ -32,13 +32,13 @@
                   <tr>
                     <td>{{domain.id}}</td>
                     <td>{{domain.name}}</td>
-                    <td>{{domain.company}}</td>
+                    <td>{{domain.domain}}</td>
                     <td>{{domain.email}}</td>
-                    @if(domain.isApproved == 0){
+                    @if(domain.approved == 0){
                       <td><span class="badge bg-danger">Rechazado</span></td>
-                    }@else if (domain.isApproved == 1) {
+                    }@else if (domain.approved == 1) {
                       <td><span class="badge bg-warning text-dark">Pendiente</span></td>
-                    }@else if (domain.isApproved == 2) {
+                    }@else if (domain.approved == 2) {
                       <td><span class="badge bg-success">Aprobado</span></td>
                     }
 
@@ -58,7 +58,7 @@
       </div>
   </div>
 </div>
-<app-modal-domain [id]=selectedDomain.id [name]=selectedDomain.name [email]=selectedDomain.email [company]=selectedDomain.company></app-modal-domain>
+<app-modal-domain [id]=selectedDomain.id [name]=selectedDomain.name [email]=selectedDomain.email [company]=selectedDomain.domain></app-modal-domain>
 <!-- Modal para agregar nueva solicitud -->
 <div class="modal fade" id="addRequestModal" tabindex="-1" aria-labelledby="addRequestModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -68,18 +68,18 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <form>
+              <form [formGroup]="domain" (ngSubmit)="postDomain()">
                   <div class="mb-3">
                       <label for="companyName" class="form-label">Nombre de la Empresa</label>
-                      <input type="text" class="form-control" id="companyName" placeholder="Nombre de la Empresa">
+                      <input type="text" class="form-control" id="companyName" placeholder="Nombre de la Empresa" formControlName="name">
                   </div>
                   <div class="mb-3">
                       <label for="domainRequested" class="form-label">Dominio Solicitado</label>
-                      <input type="text" class="form-control" id="domainRequested" placeholder="ejemplo.com">
+                      <input type="text" class="form-control" id="domainRequested" placeholder="ejemplo.com" formControlName="domain">
                   </div>
                   <div class="mb-3">
-                      <label for="requestNotes" class="form-label">Notas</label>
-                      <textarea class="form-control" id="requestNotes" rows="3" placeholder="Notas adicionales"></textarea>
+                      <label for="requestNotes" class="form-label">Contraseña del usuaio main</label>
+                      <input type="password" class="form-control" id="requestNotes"  placeholder="Notas adicionales" formControlName="password">
                   </div>
                   <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
               </form>

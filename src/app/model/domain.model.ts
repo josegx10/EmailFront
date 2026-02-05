@@ -2,20 +2,20 @@ export class Domain{
   id: number
   name: string
   email: string
-  company: string
-  isApproved: number
+  domain: string
+  approved: number
   constructor(
     id: number,
   name: string,
   email: string,
-  company: string,
-  isApproved: number
+  domain: string,
+  approved: number
   ){
     this.id = id
     this.name = name
     this.email = email
-    this.company = company
+    this.domain = domain
 
-    this.isApproved = isApproved
+    this.approved = approved
   }
 }
